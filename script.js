@@ -44,7 +44,7 @@ async function initMap() {
   map = new Map(document.getElementById("map"), {
     zoom: 12,
     center: position,
-    mapId: "DEMO_MAP_ID",
+    mapId: "AIzaSyAnkt4tps4vHrWgONAKaAo9AeNWW5IAARM",
   });
 
   // The marker, positioned at Pyrgos Psilonerou
