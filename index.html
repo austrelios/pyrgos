@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villas Pyrgos Psilonerou</title>
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -167,12 +169,33 @@
         </div>
 
 
+        <div class="inner_container">
+            <section class="inner_container_text_container">
+                <h1 class="inner_title">
+                    Location
+                </h1>
+                <p class="inner_text">
+                    Pyrgos Psilonerou is located 16km west of the centre of Chania, approximately 25 minutes by car.
+                </p>
+                <p class="inner_text">
+                    It's a length of coast stretching about 1km, located between Gerani and Malame.
+                </p>
+            </section>
+            <div id="map"></div>
+
+        </div>
+
     </div>
 
     <footer class="footer_container">
-
+<p class="inner_text">
+    © Tzamaria Eleni, Vasiliki, Stan John 2023 All rights reserved. 
+</p>
     </footer>
 
+    <!-- Google map script -->
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta" });</script>
 
     <script src="./script.js"></script>
 
