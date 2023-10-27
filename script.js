@@ -40,14 +40,14 @@ async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
+  // The map, centered at Pyrgos Psilonerou
   map = new Map(document.getElementById("map"), {
     zoom: 12,
     center: position,
     mapId: "DEMO_MAP_ID",
   });
 
-  // The marker, positioned at Uluru
+  // The marker, positioned at Pyrgos Psilonerou
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
