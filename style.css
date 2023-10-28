@@ -8,11 +8,16 @@
 
   --grayish_blue: hsl(240, 18%, 77%);
   --menu_background_color: var(--grayish_blue);
-  --menu_text_color: var(--grayish_blue);
-  --menu_focus_text_color: var(--dark_blue);
+  --menu_text_color: hsl(25, 87%, 36%);
+  --menu_focus_text_color: hsl(25, 80%, 76%);
+
+  --inner_title_text_color: hsl(25, 87%, 36%);
+  --inner_text_color:  hsl(240, 90%, 11%);
 
   --introduction_h2_text_size: x-large;
   --introduction_h3_text_size: small;
+  --introduction_h2_text_color: hsl(25, 87%, 36%);
+  --introduction_h3_text_color: hsl(240, 90%, 11%);
   --inner_text_size: small;
 }
 
@@ -24,8 +29,7 @@ body {
 }
 
 .main_menu_container {
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: .2rem;
   display: flex;
   justify-content: center;
 }
@@ -153,7 +157,6 @@ body {
 /* Add a black background color to the top navigation */
 .menu_navigation {
   overflow: hidden;
-  /* background-image: linear-gradient(90deg, white, hsl(205, 693%, 64%));
     border-radius: 5px; */
 }
 
@@ -187,9 +190,11 @@ body {
 
 .introduction_container h2 {
  font-size: var(--introduction_h2_text_size);
+ color: var(--introduction_h2_text_color);
 }
 .introduction_container h3 {
   font-size: var(--introduction_h3_text_size);
+  color: var(--introduction_h3_text_color);
 }
 
 .inner_container {
@@ -199,9 +204,14 @@ body {
   gap: 1rem
 }
 
+.inner_title {
+  color: var(--inner_title_text_color);
+}
+
 .inner_text {
   width: 20rem;
   font-size: var(--inner_text_size);
+  color: var(--inner_text_color);
 }
 
 .inner_container_img {
