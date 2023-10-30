@@ -84,7 +84,7 @@
 
         <header class="header_container">
             <nav class="main_menu_container">
-    
+
                 <div class="menu_navigation">
                     <a class="active" href="#home">Home</a>
                     <a href="#overview">Overview</a>
@@ -94,8 +94,8 @@
                     <a href="#gallery">Gallery</a>
                     <a href="#contact">Contact</a>
                 </div>
-    
-    
+
+
             </nav>
         </header>
 
@@ -165,6 +165,61 @@
 
         </div>
 
+        <div class="tabsheets_container">
+
+            <div class="tab">
+                <button class="tablinks" onclick="openTabsheet(event, 'Description')">Description</button>
+                <button class="tablinks" onclick="openTabsheet(event, 'Rooms')">Rooms</button>
+                <button class="tablinks" onclick="openTabsheet(event, 'Facilities')">Facilities</button>
+            </div>
+
+            <div id="Description" class="tabcontent">
+                <h3 class="tabsheet_title">Description</h3>
+                <p class="inner_text tabsheet_text">
+                    The villas are located 15km west of Chania, Crete.
+                    The villas are ideal for ideal for couples holidays, big families, and groups of friends.
+                    The villas consist of three seafront villas, each with their own swimming pool.
+                    The villas are located just 200 m from an exquisite NATURA-protected beach with rare flora and fauna
+                    and crystal-clear water. During the summer months, the Caretta-Caretta turtles are spawning.
+                    The villas are brand new with a completion date of December 2023.
+                </p>
+            </div>
+
+            <div id="Rooms" class="tabcontent">
+                <h3 class="tabsheet_title">Rooms</h3>
+                <p class="inner_text tabsheet_text">This is a description of the rooms.</p>
+                <div class="lounge_room">
+                    <img class="tabsheet_img" src="./images/photos/villa_1_lounge.jpg" alt="">
+                </div>
+                <div class="kitchen">
+                    <img class="tabsheet_img" src="./images/photos/villa_1_kitchen_2.jpg" alt="villa_1_kitchen_2">
+
+                </div>
+                <div class="bedroom_main">
+
+                </div>
+                <div class="yard">
+                    <img class="tabsheet_img" src="./images/photos/villa_1_back_1.jpg" alt="">
+                    <img class="tabsheet_img" src="./images/photos/villa_1_back_2.jpg" alt="">
+                </div>
+            </div>
+
+            <div id="Facilities" class="tabcontent">
+                <h3 class="tabsheet_title">Facilities</h3>
+                <p class="inner_text tabsheet_text">This is a description of the facilities.</p>
+                <ul class="inner_text">
+                    <li>43’’ LCD TV – Satellite TV Channels</li>
+                    <li>Wi-Fi in each room</li>
+                    <li>Coffee Machine - Complimentary daily</li>
+                    <li>Toiletries & Amenities</li>
+                    <li>Air Conditioning</li>
+                    <li>Towels</li>
+                </ul>
+            </div>
+
+        </div>
+
+
 
         <div class="inner_container">
             <section class="inner_container_text_container">
@@ -182,12 +237,14 @@
 
         </div>
 
+
+
     </div>
 
     <footer class="footer_container">
-<p class="inner_text">
-    © Tzamaria Eleni, Vasiliki, Stan John 2023 All rights reserved. 
-</p>
+        <p class="inner_text">
+            © Tzamaria Eleni, Vasiliki, Stan John 2023 All rights reserved.
+        </p>
     </footer>
 
     <!-- Google map script -->
