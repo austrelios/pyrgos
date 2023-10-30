@@ -8,7 +8,7 @@
 
   --grayish_blue: hsl(240, 18%, 77%);
   --menu_background_color: var(--grayish_blue);
-  --menu_text_color: hsl(25, 87%, 36%);
+  --menu_text_color: white;
   --menu_focus_text_color: hsl(25, 80%, 76%);
 
   --inner_title_text_color: hsl(25, 87%, 36%);
@@ -28,11 +28,6 @@ body {
   display: block;
 }
 
-.main_menu_container {
-  padding: .2rem;
-  display: flex;
-  justify-content: center;
-}
 
 .body_container {
   background: linear-gradient(45deg, rgba(0, 0, 0, 3e-5) 0%, rgba(0, 0, 0, 0.3) 100%);
@@ -44,7 +39,7 @@ body {
 
 
 .mySlides {
-  display: none
+  display: none;
 }
 
 .slider_img {
@@ -54,7 +49,7 @@ body {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 50rem;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -154,10 +149,22 @@ body {
 
 
 /* Menu styling */
+.header_container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 0rem;
+}
+
+.main_menu_container {
+  padding: .2rem;
+}
+
 /* Add a black background color to the top navigation */
 .menu_navigation {
   overflow: hidden;
-    border-radius: 5px; */
+  border-radius: 5px; */
 }
 
 /* Style the links inside the navigation bar */
