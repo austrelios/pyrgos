@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villas Pyrgos Psilonerou</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+
+    <div class="body_container">
+
+        <header class="header_container">
+            <nav class="main_menu_container">
+
+                <div class="menu_navigation">
+                    <a lang="en" class="active" href="./index.html">Home</a>
+                    <a lang="gr" class="active" href="./index.html">Αρχική</a>
+
+                    <a lang="en" href="./gallery.html">Gallery</a>
+                    <a lang="gr" href="./gallery.html">Φωτογραφίες</a>
+
+                    <a lang="en" href="./gallery.html">Gallery</a>
+                    <a lang="gr" href="./gallery.html">Φωτογραφίες</a>
+
+                    <a lang="en" href="#about">Rates</a>
+                    <a lang="gr" href="#about">Τιμές</a>
+
+                    <a lang="en" href="#reviews">Reviews</a>
+                    <a lang="gr" href="#reviews">Κρτιτικές</a>
+
+                    <a lang="en" href="#contact">Contact</a>
+                    <a lang="gr" href="#contact">Επικοινωνία</a>
+
+                </div>
+
+                <div class="language_dropdown">
+                    <select id="language_selector" onchange='switch_Language()'>
+                        <option class="language_dropdown_content" value="en">EN</option>
+                        <option class="language_dropdown_content" value="gr">GR</option>
+                    </select>
+
+                </div>
+
+            </nav>
+        </header>
+
+
+
+        <div class="form_container">
+            <form action="./contact.php" method="POST" class="form_fields">
+
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="fullName" required />
+      
+              <label for="email">Your Email Address</label>
+              <input type="email" id="email" name="email" required />
+      
+              <label for="message">Your Message</label>
+              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      
+              <button type="submit">Send</button>
+            </form>
+          
+          
+
+
+
+    </div>
+
+    <footer class="footer_container">
+        <p class="inner_text">
+            © Tzamaria Eleni, Vasiliki, Stan John 2023 All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Google map script -->
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta" });</script>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

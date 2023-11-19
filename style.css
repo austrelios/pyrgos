@@ -7,22 +7,33 @@
   --dark_blue: hsl(240, 38%, 20%);
 
   --grayish_blue: hsl(240, 18%, 77%);
-  --menu_background_color: var(--grayish_blue);
+  --menu_background_color: hsla(0, 100%, 50%, 0.1);
   --menu_text_color: white;
   --menu_focus_text_color: hsl(25, 80%, 76%);
 
-  --inner_title_text_color: hsl(25, 87%, 36%);
-  --inner_text_color:  hsl(240, 90%, 11%);
+  --language_menu_font_size: .8rem;
+  --language_menu_background_color: #04AA6D;
+
+  --header_text_color: rgb(121, 80, 14);
+
+  --inner_title_text_color: var(--header_text_color);
+  --inner_text_color: hsl(240, 90%, 11%);
+  --inner_text_size: small;
 
   --introduction_h2_text_size: x-large;
-  --introduction_h3_text_size: small;
-  --introduction_h2_text_color: hsl(25, 87%, 36%);
+  --introduction_h2_text_color: var(--header_text_color);
+
+  --introduction_h3_text_size: medium;
   --introduction_h3_text_color: hsl(240, 90%, 11%);
-  --inner_text_size: small;
+}
+
+.noDisplay {
+  display: none !important;
 }
 
 body {
-  font-family: Verdana, sans-serif;
+  /* font-family: Verdana, sans-serif; */
+  font-family: Open Sans, sans-serif;
   margin: 0;
   /* background: linear-gradient(180deg, rgba(0, 0, 0, 3e-5) 0%, rgba(0, 0, 0, 0.3) 100%); */
   display: block;
@@ -30,11 +41,12 @@ body {
 
 
 .body_container {
-  background: linear-gradient(45deg, rgba(0, 0, 0, 3e-5) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(45deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(60deg, rgba(255, 0, 0, 0.05) 100%, rgba(0, 0, 255, 0.05) 100%);
 }
 
 .slide_show_container {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 3e-5) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(45deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 
@@ -57,18 +69,14 @@ body {
 /* Next & previous buttons */
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  top: 16rem;
+  color: var(--dark_blue);
+  cursor: pointer;
+  box-shadow: 0 10px 20px var(--dark_blue);
+  width: 4rem;
+  justify-content: space-between;
+  padding: .8rem;
 }
 
 /* Position the "next button" to the right */
@@ -160,13 +168,55 @@ body {
 
 .main_menu_container {
   padding: .2rem;
+  display: flex;
+  /* Testing below */
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Add a black background color to the top navigation */
 .menu_navigation {
+  position: relative;
+  left: 25%;
   overflow: hidden;
-  border-radius: 5px; */
+  border-radius: 5px;
+  background: var(--menu_background_color);
 }
+
+
+/* Language Selector menu */
+#language_selector {
+  background-color: var(--language_menu_background_color);
+  color: var(--menu_text_color);
+  padding: .5rem;
+  font-size: var(--language_menu_font_size);
+  border: none;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.language_dropdown_content {
+  display: block;
+  position: absolute;
+  font-size: var(--language_menu_font_size);
+  background-color: var(--language_menu_background_color);
+  min-width: 160px;
+  box-shadow: 0 10px 20px var(--dark_blue);
+  z-index: 1;
+}
+
+#language_selector:hover {
+  background-color: #3e8e41;
+}
+
+.multilingual::after {
+  content: attr(data-en);
+}
+
+select option[value="gr"] {
+  background: rgba(100, 100, 100, 0.3);
+}
+
 
 /* Style the links inside the navigation bar */
 .menu_navigation a {
@@ -200,12 +250,14 @@ body {
 }
 
 .introduction_container h2 {
- font-size: var(--introduction_h2_text_size);
- color: var(--introduction_h2_text_color);
+  font-size: var(--introduction_h2_text_size);
+  color: var(--introduction_h2_text_color);
 }
+
 .introduction_container h3 {
   font-size: var(--introduction_h3_text_size);
   color: var(--introduction_h3_text_color);
+  font-weight: normal;
 }
 
 .inner_container {
@@ -241,10 +293,16 @@ body {
 /* Tabsheet Styling - start
 ************************ */
 /* Style the tab */
+.tabsheets_container {
+  text-align: center;
+}
+
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
 }
 
 /* Style the buttons inside the tab */
@@ -272,11 +330,13 @@ body {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
+  justify-content: center;
+  padding: 1rem 2rem;
   border: 1px solid #ccc;
   border-top: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
 }
-
 
 .tabsheet_text {
   width: 100%;
@@ -285,6 +345,18 @@ body {
 .tabsheet_img {
   width: 20%;
 }
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 /* Tabsheet Styling - end
 ************************ */
 
@@ -292,9 +364,10 @@ body {
 
 .footer_container {
   margin: 1rem;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
+
 .footer_container .inner_text {
   width: fit-content;
 }
