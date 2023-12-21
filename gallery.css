@@ -2,31 +2,39 @@
     --gallery_background_color: hsl(240, 18%, 77%);
 }
 
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body {
     background-image: url("./images/photos/view_of_sea.jpg");
 }
 
 /* Gallery page */
-.image_gallery {
+.image_gallery_grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 2rem;
+    padding: 1rem;
     justify-content: center;
   }
   
-  div.gallery {
+  div.gallery_cell {
     margin: 5px;
     border: 1px solid #ccc;
-    float: left;
-    width: 180px;
+    text-align: center;
+    /* float: left; */
+    width: 9rem;
     background-color: var(--gallery_background_color);
+    
   }
   
-  div.gallery:hover {
+  div.gallery_cell:hover {
     border: 1px solid #777;
   }
   
-  div.gallery img {
+  div.gallery_cell img {
     width: 100%;
     height: auto;
   }

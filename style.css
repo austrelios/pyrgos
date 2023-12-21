@@ -9,6 +9,7 @@
   --grayish_blue: hsl(240, 18%, 77%);
   --menu_background_color: hsla(0, 100%, 50%, 0.1);
   --menu_text_color: white;
+  --menu_font_size: 1.5rem;
   --menu_focus_text_color: hsl(25, 80%, 76%);
 
   --language_menu_font_size: .8rem;
@@ -16,13 +17,14 @@
 
   --header_text_color: rgb(121, 80, 14);
 
-  --introduction_h2_text_size: x-large;
-  --introduction_h2_text_color: var(--header_text_color);
+  --introduction_h1_text_size: xx-large;
+  --introduction_h1_text_color: var(--header_text_color);
 
   --introduction_h3_text_size: medium;
   --introduction_h3_text_color: hsl(240, 90%, 11%);
 
   --inner_title_text_color: var(--header_text_color);
+  --inner_title_font_size: xx-large;
   --inner_text_color: hsl(240, 90%, 11%);
   --inner_text_size: small;
 
@@ -41,7 +43,6 @@ body {
   /* font-family: Verdana, sans-serif; */
   font-family: Open Sans, sans-serif;
   margin: 0;
-  /* background: linear-gradient(180deg, rgba(0, 0, 0, 3e-5) 0%, rgba(0, 0, 0, 0.3) 100%); */
   display: block;
 }
 
@@ -52,7 +53,6 @@ hr {
 }
 
 .body_container {
-  background: linear-gradient(45deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.5) 100%);
   background: linear-gradient(60deg, rgba(255, 0, 0, 0.05) 100%, rgba(0, 0, 255, 0.05) 100%);
 }
 
@@ -192,6 +192,7 @@ hr {
   overflow: hidden;
   border-radius: 5px;
   background: var(--menu_background_color);
+  
 }
 
 
@@ -236,7 +237,7 @@ select option[value="gr"] {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: var(--menu_font_size);
 }
 
 /* Change the color of links on hover */
@@ -252,6 +253,7 @@ select option[value="gr"] {
 }
 
 
+
 /* Introduction Container Styling
 ****************************** */
 .introduction_container {
@@ -260,9 +262,9 @@ select option[value="gr"] {
   text-align: center;
 }
 
-.introduction_container h2 {
-  font-size: var(--introduction_h2_text_size);
-  color: var(--introduction_h2_text_color);
+.introduction_container h1 {
+  font-size: var(--introduction_h1_text_size);
+  color: var(--introduction_h1_text_color);
 }
 
 .introduction_container h3 {
@@ -275,15 +277,19 @@ select option[value="gr"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .inner_title {
+  text-align: center;
   color: var(--inner_title_text_color);
+  font-size: var(--inner_title_font_size);
+  margin-bottom: .5rem;
 }
 
 .inner_text {
-  width: 20rem;
+  width: 40rem;
   font-size: var(--inner_text_size);
   color: var(--inner_text_color);
 }
@@ -294,7 +300,7 @@ select option[value="gr"] {
 
 .side_img {
   width: inherit;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 /* Introduction Container Styling - end

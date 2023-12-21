@@ -63,11 +63,15 @@ if (isset($_POST['email'])) {
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $email_subject, $email_message, $headers);
+    mail($email_to, $email_subject, $email_message, $headers);
+
+    header("Location: contact.html?success=true");
+
 ?>
 
     <!-- Replace this as your success message -->
 
+    
     Thanks for contacting us, we will get back to you as soon as possible.
 
 <?php

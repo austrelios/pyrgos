@@ -2,143 +2,252 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villas Pyrgos Psilonerou</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villas Pyrgos Psilonerou</title>
 
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
 </head>
 
 <body>
 
-    <header class="header_container">
-        <nav class="main_menu_container">
 
-            <div class="menu_navigation">
-                <a class="active" href="./index.html">Home</a>
-                <a href="#overview">Overview</a>
-                <a href="#contact">Gallery</a>
-                <a href="#about">Rates</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
+  <header class="header_container">
+    <nav class="main_menu_container">
 
+      <div class="menu_navigation">
+        <a lang="en" class="active" href="./index.html">Home</a>
+        <a lang="gr" class="active" href="./index.html">Αρχική</a>
 
-        </nav>
-    </header>
-    <div class="body_container">
+        <a lang="en" href="./villas.html">Villas</a>
+        <a lang="gr" href="./villas.html">Βίλες</a>
 
-        <div class="image_gallery">
-
-            <div class="image_gallery">                  
-                  <div class="gallery">
-                    <a target="_blank" href="villa_1_front_1.jpg">
-                      <img src="./images/photos/villa_1_front_1.jpg" alt="Forest" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 1 Front</div>
-                  </div>
-                  
-                  <div class="gallery">
-                    <a target="_blank" href="villa_1_lounge_1.jpg">
-                      <img src="./images/photos/villa_1_lounge_1.jpg" alt="Northern Lights" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 1 Lounge</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_1_dining_1.jpg">
-                      <img src="./images/photos/villa_1_dining_1.jpg" alt="Mountains" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 1 Dining Area</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_1_kitchen_2.jpg">
-                      <img src="./images/photos/villa_1_kitchen_2.jpg" alt="Mountains" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 1 Kitchen</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_1_back_1.jpg">
-                      <img src="./images/photos/villa_1_back_1.jpg" alt="Mountains" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 1 Back</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_1_back_3.jpg">
-                      <img src="./images/photos/villa_1_back_3.jpg" alt="Mountains" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 1 Back</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_2_front_3.jpg">
-                      <img src="./images/photos/villa_2_front_3.jpg" alt="Mountains" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 2 Front</div>
-                  </div>
-
-                  
-                  <div class="gallery">
-                    <a target="_blank" href="villa_2_front_4.jpg">
-                      <img src="./images/photos/villa_2_front_4.jpg" alt="Mountains" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 2 Front</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_2_balcony_3.jpg">
-                      <img src="./images/photos/villa_2_balcony_3.jpg" alt="Mountains" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 2 Balcony</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_2_pool_1.jpg">
-                      <img src="./images/photos/villa_2_pool_1.jpg" alt="Mountains" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 2 Pool</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_3_balcony.jpg">
-                      <img src="./images/photos/villa_3_balcony.jpg" alt="View of Sea" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 3 Balcony</div>
-                  </div>
-
-                  <div class="gallery">
-                    <a target="_blank" href="villa_3_kitchen_1.jpg">
-                      <img src="./images/photos/villa_3_kitchen_1.jpg" alt="View of Sea" width="600" height="400">
-                    </a>
-                    <div class="desc">Villa 3 Kitchen</div>
-                  </div>
-    
-            </div>
-    
-    
+        <a lang="en" href="./gallery.html">Gallery</a>
+        <a lang="gr" href="./gallery.html">Φωτογραφίες</a>
 
 
+        <a lang="en" href="#reviews">Reviews</a>
+        <a lang="gr" href="#reviews">Κρτιτικές</a>
+
+        <a lang="en" href="./contact.html">Contact</a>
+        <a lang="gr" href="./contact.html">Επικοινωνία</a>
+
+      </div>
+
+      <div class="language_dropdown">
+        <select id="language_selector" onchange='switch_Language()'>
+          <option class="language_dropdown_content" value="en">EN</option>
+          <option class="language_dropdown_content" value="gr">GR</option>
+        </select>
+
+      </div>
+
+    </nav>
+  </header>
+
+
+
+  <div class="body_container">
+
+    <div class="image_gallery">
+
+      <div class="image_gallery">
+        <div class="gallery_cell">
+          <a target="_blank" href="gallery_01.jpg">
+            <img src="./images/gallery/gallery-01.jpg" alt="Forest" width="600" height="400">
+          </a>
+          <!-- <div class="desc">Villa 2 Front</div> -->
         </div>
 
+        <div class="gallery_cell">
+          <a target="_blank" href="gallery_02.jpg">
+            <img src="./images/gallery/gallery-02.jpg" alt="Northern Lights" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="gallery_cell">
+          <a target="_blank" href="gallery-03.jpg">
+            <img src="./images/gallery/gallery-03.jpg" alt="Mountains" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="gallery_cell">
+          <a target="_blank" href="villa_1_kitchen_2.jpg">
+            <img src="./images/gallery/gallery-04.jpg" alt="Mountains" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="gallery_cell">
+          <a target="_blank" href="villa_1_back_1.jpg">
+            <img src="./images/gallery/gallery-05.jpg" alt="Mountains" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="gallery_cell">
+          <a target="_blank" href="villa_1_back_3.jpg">
+            <img src="./images/gallery/gallery-06.jpg" alt="Mountains" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="gallery_cell">
+          <a target="_blank" href="villa_2_front_3.jpg">
+            <img src="./images/gallery/gallery-07.jpg" alt="Mountains" width="600" height="400">
+          </a>
+        </div>
+
+
+        <div class="gallery_cell">
+          <a target="_blank" href="villa_2_front_4.jpg">
+            <img src="./images/gallery/gallery-08.jpg" alt="Mountains" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="gallery_cell">
+          <a target="_blank" href="villa_2_balcony_3.jpg">
+            <img src="./images/gallery/gallery-09.jpg" alt="Mountains" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="gallery_cell">
+          <a target="_blank" href="villa_2_pool_1.jpg">
+            <img src="./images/gallery/gallery-10.jpg" alt="Mountains" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="image_gallery_grid">
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_1_front_1.jpg">
+              <img src="./images/gallery/gallery-11.jpg" alt="Forest" width="600" height="400">
+            </a>
+          </div>
   
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_1_lounge_1.jpg">
+              <img src="./images/gallery/gallery-12.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+          </div>
+<!--   
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_1_dining_1.jpg">
+              <img src="./images/gallery/gallery-13.jpg" alt="Mountains" width="600" height="400">
+            </a>
+          </div>
+  
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_1_kitchen_2.jpg">
+              <img src="./images/gallery/gallery-14.jpg" alt="Mountains" width="600" height="400">
+            </a>
+          </div>
+  
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_1_back_1.jpg">
+              <img src="./images/gallery/gallery-15.jpg" alt="Mountains" width="600" height="400">
+            </a>
+          </div>
+  
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_1_back_3.jpg">
+              <img src="./images/gallery/gallery-16.jpg" alt="Mountains" width="600" height="400">
+            </a>
+          </div>
+  
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_2_front_3.jpg">
+              <img src="./images/gallery/gallery-17.jpg" alt="Mountains" width="600" height="400">
+            </a>
+          </div>
+  
+  
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_2_front_4.jpg">
+              <img src="./images/gallery/gallery-18.jpg" alt="Mountains" width="600" height="400">
+            </a>
+          </div>
+  
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_2_balcony_3.jpg">
+              <img src="./images/gallery/gallery-19.jpg" alt="Mountains" width="600" height="400">
+            </a>
+          </div>
+  
+          <div class="gallery_cell">
+            <a target="_blank" href="villa_2_pool_1.jpg">
+              <img src="./images/gallery/gallery-20.jpg" alt="Mountains" width="600" height="400">
+            </a>
+          </div>
+
+          <div class="image_gallery_grid">
+            <div class="gallery_cell">
+              <a target="_blank" href="villa_1_front_1.jpg">
+                <img src="./images/gallery/gallery-21.jpg" alt="Forest" width="600" height="400">
+              </a>
+            </div>
+    
+            <div class="gallery_cell">
+              <a target="_blank" href="villa_1_lounge_1.jpg">
+                <img src="./images/gallery/gallery-22.jpg" alt="Northern Lights" width="600" height="400">
+              </a>
+            </div>
+    
+            <div class="gallery_cell">
+              <a target="_blank" href="villa_1_dining_1.jpg">
+                <img src="./images/gallery/gallery-23.jpg" alt="Mountains" width="600" height="400">
+              </a>
+            </div>
+    
+            <div class="gallery_cell">
+              <a target="_blank" href="villa_1_kitchen_2.jpg">
+                <img src="./images/gallery/gallery-24.jpg" alt="Mountains" width="600" height="400">
+              </a>
+            </div>
+    
+            <div class="gallery_cell">
+              <a target="_blank" href="villa_1_back_1.jpg">
+                <img src="./images/gallery/gallery-25.jpg" alt="Mountains" width="600" height="400">
+              </a>
+            </div>
+    
+            <div class="gallery_cell">
+              <a target="_blank" href="villa_1_back_3.jpg">
+                <img src="./images/gallery/gallery-26.jpg" alt="Mountains" width="600" height="400">
+              </a>
+            </div>
+    
+            <div class="gallery_cell">
+              <a target="_blank" href="villa_2_front_3.jpg">
+                <img src="./images/gallery/gallery-27.jpg" alt="Mountains" width="600" height="400">
+              </a>
+            </div>
+        
+            <div class="gallery_cell">
+              <a target="_blank" href="villa_2_front_4.jpg">
+                <img src="./images/gallery/gallery-28.jpg" alt="Mountains" width="600" height="400">
+              </a>
+            </div>
+     -->
+
+      </div>
+
+
+
 
     </div>
 
-    <footer class="footer_container">
-
-    </footer>
 
 
+  </div>
+
+  <footer class="footer_container">
+
+  </footer>
 
 
 
-    <script src="./script.js"></script>
+
+
+  <script src="./script.js"></script>
 
 </body>
 
