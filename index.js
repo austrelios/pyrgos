@@ -1,55 +1,72 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+// Automatic carousel slide show with manual controls
+// https://codepen.io/mirandalwashburn/pen/GRggrBz
+// https://www.sliderrevolution.com/resources/automatic-slideshow/
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+var slideIndex = 0;
+var slideIndexCurrent = 0;
+showSlides();
+//showSlidesCurrent(slideIndexCurrent);
 
+
+/*** CURRENT SLIDE on click ***/
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  slideIndexCurrent = n;
+  slideIndex = n;
+  showSlidesCurrent(slideIndexCurrent);
+
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+function showSlidesCurrent(n) {
+  //var slideIndex = 1;
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndexCurrent = 1}   
+
+  if (n < 0) {slideIndexCurrent = slides.length}
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = "none";  
   }
+  slideIndex++;
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  console.log("dot:" + n + " slideIndex:" + slideIndex);
+  slides[slideIndexCurrent-1].style.display = "block";  
+  dots[slideIndexCurrent-1].className += " active";
+  slideIndexCurrent++;
 }
 
 
-// The below code is for the automatic slideshow
-var myIndex = 0;
-carousel();
-
-function carousel() {
+/*** SHOW SLIDE with timer ***/
+function showSlides() {
   var i;
-
-  let dots = document.getElementsByClassName("dot");
-
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-  myIndex++;
-  if (myIndex > x.length) { myIndex = 1 }
-  x[myIndex - 1].style.display = "block";
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 
-  // console.log("carousel:" + (myIndex-1));
-  // dots[myIndex - 1].className -= " active";
-  // dots[myIndex].className += " active";
-
-  setTimeout(carousel, 4000); // Change image every 4 seconds
+  setTimeout(showSlides, 2000); // Change image every x seconds
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Code for Google MediaCapabilities
