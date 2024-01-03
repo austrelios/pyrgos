@@ -12,10 +12,15 @@ body {
     background-image: url("./images/photos/view_of_sea.jpg");
 }
 
+.gallery_container {
+  margin: 2rem;
+  margin-top: 5rem;
+}
+
 /* Gallery page */
 .image_gallery_grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     padding: 1rem;
     justify-content: center;
   }

@@ -1,6 +1,50 @@
+body {
+  background: linear-gradient(45deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
 
+.villas_container {
+  text-align: center;
+  padding: 0 5% 0 5%;
+}
 
+.splash_img {
+  width: 100%
+}
 
+.villa_1_container, .villa_2_container, .villa_3_container {
+  padding: 1rem;
+  width: fit-content;
+  display: flex;
+  text-align: left;
+  margin :auto;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 20px var(--dark_blue);
+}
+
+.villa_1_container {
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(255,255,255,1) 89%);
+  box-shadow: 0 10px 20px var(--dark_blue);
+}
+
+.villa_2_container {
+  background: linear-gradient(45deg, rgba(175,141,16,1) 0%, rgba(180,242,172,1) 25%);
+}
+
+.villa_3_container {
+  background: linear-gradient(45deg, rgba(175,141,16,1) 0%, rgba(245,231,151,1) 25%);
+}
+
+.villa_container_grid {
+  padding: 1rem 0 1rem 0 ;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: .5rem;
+}
+
+.grid_img {
+  width: 7rem;
+
+}
 
 /* Tabsheet Styling - start
 ************************ */
@@ -61,19 +105,27 @@
 .tabsheet_text {
   text-align: left;
 }
+
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Tabsheet Styling - end
 ************************ */
-
-
-

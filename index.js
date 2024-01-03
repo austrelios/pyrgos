@@ -23,6 +23,7 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+  console.log("dot:" + n + " slideIndex:" + slideIndex);
 }
 
 
@@ -32,6 +33,9 @@ carousel();
 
 function carousel() {
   var i;
+
+  let dots = document.getElementsByClassName("dot");
+
   var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
@@ -39,6 +43,11 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) { myIndex = 1 }
   x[myIndex - 1].style.display = "block";
+
+  // console.log("carousel:" + (myIndex-1));
+  // dots[myIndex - 1].className -= " active";
+  // dots[myIndex].className += " active";
+
   setTimeout(carousel, 4000); // Change image every 4 seconds
 }
 

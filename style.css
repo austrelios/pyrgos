@@ -30,9 +30,6 @@
 
   --footer_text_color: hsl(240, 90%, 11%);
   --footer_text_size: small;
-
-
-
 }
 
 .noDisplay {
@@ -58,6 +55,7 @@ hr {
 
 .slide_show_container {
   background: linear-gradient(45deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: red;
 }
 
 
@@ -71,7 +69,7 @@ hr {
 }
 
 /* Slideshow container */
-.slideshow-container {
+.slides-container {
   max-width: 100%;
   position: relative;
   margin: auto;
@@ -157,7 +155,6 @@ hr {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-
   .prev,
   .next,
   .text {
@@ -169,6 +166,10 @@ hr {
 
 /* Menu styling */
 /* **************************************************** */
+.hamburger_menu_container {
+  display: none;
+}
+
 .header_container {
   position: absolute;
   width: 100%;
@@ -194,6 +195,11 @@ hr {
   background: var(--menu_background_color);
   
 }
+
+
+
+
+
 
 
 /* Language Selector menu */
@@ -324,8 +330,26 @@ select option[value="gr"] {
 }
 
 
+
+
 /* Google Map */
 #map {
   width: 20rem;
   height: 10rem;
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+  .main_menu_container {
+    display: none;
+  }
+  .hamburger_menu_container {
+    display: block;
+  }
+
+  #hamburger-menu {
+    display: inline;
+  }
 }
