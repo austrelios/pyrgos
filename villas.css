@@ -10,14 +10,17 @@ body {
 
 .splash_img {
   width: 100%;
-
-  animation: splash_img_animation 5s;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-
-@keyframes splash_img_animation {
-  from {left: 0px;}
-  to {left: 300px;}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .villa_1_container, .villa_2_container, .villa_3_container {
