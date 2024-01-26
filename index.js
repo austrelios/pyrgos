@@ -4,9 +4,9 @@
 
 var slideIndex = 0;
 var slideIndexCurrent = 0;
-showSlides();
-//showSlidesCurrent(slideIndexCurrent);
 
+
+showSlides();
 
 /*** CURRENT SLIDE on click ***/
 function currentSlide(n) {
@@ -53,7 +53,7 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 
-  setTimeout(showSlides, 2000); // Change image every x seconds
+  setTimeout(showSlides, 4500); // Change image every x seconds
 }
 
 
@@ -61,9 +61,20 @@ function showSlides() {
 
 
 
+// **************** START Code for animating images when user scrolls them into view
+var images_to_amimate = document.querySelectorAll('.animate_side_img'); //get all elements with the .scroll class
 
-
-
+document.onscroll = function() { //when scrolling the screen...
+  images_to_amimate.forEach(images_to_amimate => { //each element with class .animate_side_img...
+  var image_to_animate_position = images_to_amimate.getBoundingClientRect(); //gets values from element position
+  var alturaEl = image_to_animate_position.top; //take distance from the top of the screen
+  
+  if(alturaEl < 500) { //if the distance from the top is less than 500
+    images_to_amimate.classList.add('animate_side_img--show'); //add the .scroll--show class
+  }
+ });
+}
+// **************** END Code for animating images when user scrolls them into view
 
 
 

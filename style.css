@@ -4,6 +4,8 @@
 
 :root {
   /* ### Primary */
+  --website_background_color: hsl(240, 18%, 77%);
+
   --dark_blue: hsl(240, 38%, 20%);
 
   --grayish_blue: hsl(240, 18%, 77%);
@@ -24,7 +26,7 @@
   --introduction_h3_text_color: hsl(240, 90%, 11%);
 
   --inner_title_text_color: var(--header_text_color);
-  --inner_title_font_size: xx-large;
+  --inner_title_font_size: x-large;
   --inner_text_color: hsl(240, 90%, 11%);
   --inner_text_size: small;
 
@@ -53,51 +55,15 @@ hr {
   background: linear-gradient(60deg, rgba(255, 0, 0, 0.05) 100%, rgba(0, 0, 255, 0.05) 100%);
 }
 
+
+
+/* ********************** Carousel Slide Show Code */
 .slide_show_container {
   background: linear-gradient(45deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-color: #ccc;
-}
-
-
-.mySlides {
-  display: none;
-}
-
-.slider_img {
-  border-radius: 10px;
-  vertical-align: middle;
-}
-
-/* Slideshow container */
-.slides-container {
   max-width: 100%;
   position: relative;
   margin: auto;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  position: absolute;
-  top: 16rem;
-  color: var(--dark_blue);
-  cursor: pointer;
-  box-shadow: 0 10px 20px var(--dark_blue);
-  width: 4rem;
-  justify-content: space-between;
-  padding: .8rem;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -137,21 +103,31 @@ hr {
   background-color: #717171;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.slider_img {
+  vertical-align: middle;
 }
 
-@keyframes fade {
-  from {
-    opacity: .4
+
+.slides_container {
+  animation: 36s fading-slideshow infinite linear;
+  opacity: 0.0
+
+}
+
+.mySlides {
+  animation: 36s fading-slideshow infinite linear;
+  opacity: 0.0
+}
+
+@keyframes fading-slideshow {
+    0%     {opacity: 0.3; transform: translateX(-15px);}
+    4%     {opacity: 1.0; transform: translateX(0px);}
+    33.33% {opacity: 1.0; transform: translateX(0px);}
+    37.33% {opacity: 0.3; transform: translateX(10px);}
+    100%   {opacity: 0.0; transform: translateX(15px);}
   }
 
-  to {
-    opacity: 1
-  }
-}
+
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -161,6 +137,7 @@ hr {
     font-size: 11px
   }
 }
+/* ********************** END Carousel Slide Show Code */
 
 
 
@@ -292,6 +269,7 @@ select option[value="gr"] {
   color: var(--inner_title_text_color);
   font-size: var(--inner_title_font_size);
   margin-bottom: .5rem;
+  text-transform: uppercase;
 }
 
 .inner_text {
@@ -305,8 +283,18 @@ select option[value="gr"] {
 }
 
 .side_img {
-  width: inherit;
+  width: 100%;
   border-radius: 5px;
+}
+
+.animate_side_img {
+ transform: translateY(-40px);
+ opacity: 0.4;
+ transition: 1.5s;
+}
+.animate_side_img--show {
+ transform: translateY(0px);
+ opacity: 1;
 }
 
 /* Introduction Container Styling - end

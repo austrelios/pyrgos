@@ -1,14 +1,29 @@
+:root {
+ --selected_tab_color: #ccc;
+ --unselected_tab_color: #f1f1f1;
+ --hover_tab_color: #ddd;
+ --background_image: url("./images/photos/villas_background_image.jpg") 
+ 
+}
+
 body {
-  background: linear-gradient(45deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: lightblue var(--background_image) no-repeat fixed center;
+  background-size: 100%;
 }
 
-.villas_container {
-  text-align: center;
-  padding: 0 5% 0 5%;
-
+/* This class is defined in style.css. Below are some additional properties */
+.introduction_container {
+  margin-top: 2rem;
 }
 
-.splash_img {
+.introduction_container h1 {
+}
+
+.introduction_container h3 {
+ margin-top: 1rem;
+}
+
+/* .splash_img {
   width: 100%;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -19,88 +34,86 @@ body {
       opacity: 0;
   }
   100% {
-      opacity: 1;
+      opacity: .2;
   }
-}
+} */
 
 .villa_1_container, .villa_2_container, .villa_3_container {
-  padding: 1rem;
-  width: fit-content;
   display: flex;
   text-align: left;
   margin :auto;
-  margin-bottom: 2rem;
-  box-shadow: 0 10px 20px var(--dark_blue);
+  margin-bottom: 1rem;
+  align-items: center;
+  padding: 2rem;
 }
 
-.villa_1_container {
-  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(255,255,255,1) 89%);
-  box-shadow: 0 10px 20px var(--dark_blue);
-}
-
-.villa_2_container {
-  background: linear-gradient(45deg, rgba(175,141,16,1) 0%, rgba(180,242,172,1) 25%);
-}
-
-.villa_3_container {
-  background: linear-gradient(45deg, rgba(175,141,16,1) 0%, rgba(245,231,151,1) 25%);
-}
 
 .villa_container_grid {
   padding: 1rem 0 1rem 0 ;
   display: grid;
   grid-template-columns: auto auto auto;
   gap: .5rem;
+  background-color: var(--selected_tab_color);
 }
 
 .grid_img {
-  width: 7rem;
-
+  width: 8rem;
 }
+
 
 /* Tabsheet Styling - start
 ************************ */
 /* Style the tab */
 .tabsheets_container {
+
   text-align: center;
+  background-color: var(--unselected_tab_color);
+
 }
 
 .tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background: var(website_background_color);
   display: flex;
   justify-content: center;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
+  display: block;
   background-color: inherit;
-  float: left;
+  color: black;
+  padding: 1rem 1rem;
+  width: 34%;
   border: none;
   outline: none;
+  text-align: left;
   cursor: pointer;
-  padding: 14px 16px;
   transition: 0.3s;
-  font-size: 17px;
+  padding: 0;
+  text-align: center;
+  border: .2px solid var(--selected_tab_color);
+  border-radius: 0;
+
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: var(--hover_tab_color);
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
+.tab button:focus {
+  background-color: var(--selected_tab_color);
+  border-radius: 20px 20px 0 0;
 }
+
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   justify-content: center;
-  padding: 1rem 2rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--selected_tab_color);
+  background-color: var(--selected_tab_color);
   border-top: none;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
@@ -111,7 +124,7 @@ body {
 }
 
 .tabsheet_img {
-  width: 20%;
+  width: 50%;
 }
 
 .tabsheet_text {
@@ -120,24 +133,17 @@ body {
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from {opacity: 0;}
+  to   {opacity: 1;}
 }
 
 @keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from {opacity: 0;}
+  to   {opacity: 1;}
 }
 
 /* Tabsheet Styling - end
 ************************ */
+
+
+

@@ -1,3 +1,36 @@
+:root {
+}
+
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+background: var(--website_background_color);
+}
+
+
+
+/* Below property will override the property from style.css */
+.body_container {
+  background: var(--gallery_background_color);
+}
+
+/* This class is defined in style.css. Below are some additional properties */
+.introduction_container {
+  margin-top: 4rem;
+}
+
+.introduction_container h1 {
+}
+
+.introduction_container h3 {
+ margin-top: 1rem;
+}
+
+
 /* 
   CONTACT FORM EXAMPLE FOR FORMCARRY
 

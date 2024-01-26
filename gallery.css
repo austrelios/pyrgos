@@ -2,19 +2,35 @@
     --gallery_background_color: hsl(240, 18%, 77%);
 }
 
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+body {
+  background: var(--website_background_color);
 }
 
-body {
-    background-image: url("./images/photos/view_of_sea.jpg");
+/* Below property will override the property from style.css */
+.body_container {
+  background: var(--website_background_color);
+
 }
+
+/* This class is defined in style.css. Below are some additional properties */
+.introduction_container {
+  margin-top: 2rem;
+}
+
+.introduction_container h1 {
+}
+
+.introduction_container h3 {
+ margin-top: 1rem;
+}
+
+
 
 .gallery_container {
+  background: lightblue url("./images/photos/view_of_sea.jpg") no-repeat fixed center;
+
   margin: 2rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 /* Gallery page */

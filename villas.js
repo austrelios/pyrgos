@@ -1,4 +1,3 @@
-console.log("Inside villas.js")
 
 switch_Language();
 
@@ -6,7 +5,7 @@ switch_Language();
 // *************************************
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+// document.getElementById("defaultOpen").click();
 
 // Display the clicked tabsheet
 function openTabsheet(evt, tabsheetName) {
@@ -18,6 +17,7 @@ function openTabsheet(evt, tabsheetName) {
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].className = tablinks[i].className.replace(" active", " inactive");
   }
   document.getElementById(tabsheetName).style.display = "block";
   evt.currentTarget.className += " active";
