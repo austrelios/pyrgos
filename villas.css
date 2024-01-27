@@ -2,13 +2,18 @@
  --selected_tab_color: #ccc;
  --unselected_tab_color: #f1f1f1;
  --hover_tab_color: #ddd;
- --background_image: url("./images/photos/villas_background_image.jpg") 
+ --background_image: url("./images/photos/villas_background_image.jpg");
+ 
  
 }
 
 body {
   background: lightblue var(--background_image) no-repeat fixed center;
-  background-size: 100%;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+    background-position: top center;
+
+
 }
 
 /* This class is defined in style.css. Below are some additional properties */
@@ -67,12 +72,13 @@ body {
 .tabsheets_container {
 
   text-align: center;
-  background-color: var(--unselected_tab_color);
 
+  background-color:transparent;
 }
 
 .tab {
   background: var(website_background_color);
+  background-color: var(--unselected_tab_color);
   display: flex;
   justify-content: center;
 }
@@ -117,6 +123,7 @@ body {
   border-top: none;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
+  
 }
 
 .tabsheet_text {
@@ -133,13 +140,21 @@ body {
 
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
+  from { transform: scale(0.5);}
+  to   { transform: scale(1);}
+
   from {opacity: 0;}
   to   {opacity: 1;}
+
 }
 
 @keyframes fadeEffect {
+  from { transform: scale(.5);}
+  to   { transform: scale(1);}
+
   from {opacity: 0;}
   to   {opacity: 1;}
+
 }
 
 /* Tabsheet Styling - end
