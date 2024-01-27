@@ -5,6 +5,7 @@
 :root {
   /* ### Primary */
   --website_background_color: hsl(240, 18%, 77%);
+  --website_background_image: url("./images/photos/villas_background_image.jpg");
 
   --dark_blue: hsl(240, 38%, 20%);
 

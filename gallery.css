@@ -4,31 +4,38 @@
 
 body {
   background: var(--website_background_color);
+  background: lightblue var(--website_background_image) no-repeat fixed center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: top center;
+
 }
 
 /* Below property will override the property from style.css */
 .body_container {
   background: var(--website_background_color);
+  background-color:transparent;
+
 
 }
 
 /* This class is defined in style.css. Below are some additional properties */
 .introduction_container {
-  margin-top: 2rem;
 }
 
 .introduction_container h1 {
 }
 
 .introduction_container h3 {
- margin-top: 1rem;
+ margin-top: 0;
+ margin-bottom: 0;
 }
 
 
 
 .gallery_container {
-  background: lightblue url("./images/photos/view_of_sea.jpg") no-repeat fixed center;
-
+  /* background: lightblue url("./images/photos/view_of_sea.jpg") no-repeat fixed center; */
+  background-color: transparent;
   margin: 2rem;
   margin-top: 1rem;
 }
@@ -38,6 +45,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     padding: 1rem;
+    padding-top: 0;
     justify-content: center;
   }
   
@@ -48,7 +56,6 @@ body {
     /* float: left; */
     width: 9rem;
     background-color: var(--gallery_background_color);
-    
   }
   
   div.gallery_cell:hover {

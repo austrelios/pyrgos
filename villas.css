@@ -2,16 +2,14 @@
  --selected_tab_color: #ccc;
  --unselected_tab_color: #f1f1f1;
  --hover_tab_color: #ddd;
- --background_image: url("./images/photos/villas_background_image.jpg");
- 
  
 }
 
 body {
-  background: lightblue var(--background_image) no-repeat fixed center;
+  background: lightblue var(--website_background_image) no-repeat fixed center;
   background-size: 100% 100%;
   background-attachment: fixed;
-    background-position: top center;
+  background-position: top center;
 
 
 }
