@@ -41,12 +41,13 @@ body {
   }
 } */
 
-.villa_1_container, .villa_2_container, .villa_3_container {
+#villa_1_container, #villa_2_container, #villa_3_container {
   display: flex;
   text-align: left;
   margin :auto;
   margin-bottom: 1rem;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
 }
 
@@ -54,6 +55,7 @@ body {
 .villa_container_grid {
   padding: 1rem 0 1rem 0 ;
   display: grid;
+  margin: 1rem;
   grid-template-columns: auto auto auto;
   gap: .5rem;
   background-color: var(--selected_tab_color);
@@ -61,6 +63,10 @@ body {
 
 .grid_img {
   width: 8rem;
+}
+
+.villa_description {
+  padding: 1rem;
 }
 
 

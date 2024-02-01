@@ -21,6 +21,7 @@ body {
 
 /* This class is defined in style.css. Below are some additional properties */
 .introduction_container {
+  margin-top: 2rem;
 }
 
 .introduction_container h1 {
