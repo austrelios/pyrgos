@@ -1,6 +1,7 @@
 :root {
  --selected_tab_color: #ccc;
- --unselected_tab_color: #f1f1f1;
+ --unselected_tab_color: var(--website_background_color);
+
  --hover_tab_color: #ddd;
  
 }
@@ -10,8 +11,6 @@ body {
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: top center;
-
-
 }
 
 /* This class is defined in style.css. Below are some additional properties */
@@ -24,6 +23,13 @@ body {
 
 .introduction_container h3 {
  margin-top: 1rem;
+ text-align: left;
+ margin-left: 10%;
+}
+
+.inner_text {
+  font-size: medium;
+  width: inherit;
 }
 
 /* .splash_img {
@@ -61,27 +67,47 @@ body {
   background-color: var(--selected_tab_color);
 }
 
+.amenities {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.amenity_description {
+  padding: 0 .4rem 0 .4rem;
+}
+.amenity_text {
+  font-size: small;
+  color: var(--inner_text_color);
+}
+.amenity_icon {
+  width: 2rem;
+}
+
 .grid_img {
   width: 8rem;
 }
 
 .villa_description {
-  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: left;
+  width: inherit;
 }
 
 
+ul {
+  margin-top: 0;
+}
 /* Tabsheet Styling - start
 ************************ */
 /* Style the tab */
 .tabsheets_container {
-
   text-align: center;
-
   background-color:transparent;
 }
 
 .tab {
-  background: var(website_background_color);
   background-color: var(--unselected_tab_color);
   display: flex;
   justify-content: center;

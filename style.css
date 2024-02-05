@@ -4,19 +4,28 @@
 
 :root {
   /* ### Primary */
-  --website_background_color: hsl(240, 18%, 77%);
+  --website_background_color: #F9F4DC;
   --website_background_image: url("./images/photos/villas_background_image.jpg");
+  --website_background_gradient: linear-gradient(60deg, rgba(255, 0, 0, 0.05) 100%, rgba(0, 0, 255, 0.05) 100%);
 
   --dark_blue: hsl(240, 38%, 20%);
 
   --grayish_blue: hsl(240, 18%, 77%);
   --menu_background_color: hsla(0, 100%, 50%, 0.1);
+  --menu_active_background_color: #04AA6D;
   --menu_text_color: white;
   --menu_font_size: 1.5rem;
   --menu_focus_text_color: hsl(25, 80%, 76%);
 
   --language_menu_font_size: .8rem;
   --language_menu_background_color: #04AA6D;
+  --language_hover_background_color: #3e8e41;
+
+  --slideshow_background_color: #ccc;
+
+  --dot_background_color: #bbb;
+  --dot_hover_background_color: #717171;
+
 
   --header_text_color: rgb(121, 80, 14);
 
@@ -44,24 +53,24 @@ body {
   font-family: Open Sans, sans-serif;
   margin: 0;
   display: block;
+  background: var(--website_background_color);
 }
 
 hr {
   height: 1px;
-  background-color: #ccc;
+  background-color: var(--slideshow_background_color);
   border: none;
 }
 
 .body_container {
-  background: linear-gradient(60deg, rgba(255, 0, 0, 0.05) 100%, rgba(0, 0, 255, 0.05) 100%);
+
 }
 
 
 
 /* ********************** Carousel Slide Show Code */
 .slide_show_container {
-  background: linear-gradient(45deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-color: #ccc;
+  background-color: var(--slideshow_background_color);
   max-width: 100%;
   position: relative;
   margin: auto;
@@ -92,7 +101,7 @@ hr {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: var(--dot_background_color);;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -101,7 +110,7 @@ hr {
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: var(--dot_hover_background_color);
 }
 
 .slider_img {
@@ -195,7 +204,7 @@ hr {
 }
 
 #language_selector:hover {
-  background-color: #3e8e41;
+  background-color: var(--language_hover_background_color);
 }
 
 .multilingual::after {
@@ -225,7 +234,7 @@ select option[value="gr"] {
 
 /* Add a color to the active/current link */
 .menu_navigation a.active {
-  background-color: #04AA6D;
+  background-color: var(--menu_active_background_color);;
   color: white;
 }
 
