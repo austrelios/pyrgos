@@ -245,7 +245,8 @@ select option[value="gr"] {
 .introduction_container {
   padding: 2rem;
   font-weight: normal;
-  text-align: center;
+  /* text-align: center; */
+  text-align: left;
 }
 
 .introduction_container h1 {
