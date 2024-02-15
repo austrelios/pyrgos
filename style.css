@@ -12,7 +12,7 @@
 
   --grayish_blue: hsl(240, 18%, 77%);
   --menu_background_color: hsla(0, 100%, 50%, 0.1);
-  --menu_active_background_color: #04AA6D;
+  --menu_current_item_background_color: #04AA6D;
   --menu_text_color: white;
   --menu_font_size: 1.5rem;
   --menu_focus_text_color: hsl(25, 80%, 76%);
@@ -108,7 +108,7 @@ hr {
   cursor:pointer;
 }
 
-.active,
+.current-item,
 .dot:hover {
   background-color: var(--dot_hover_background_color);
 }
@@ -143,100 +143,6 @@ hr {
 /* ********************** END Carousel Slide Show Code */
 
 
-
-/* Menu styling */
-/* **************************************************** */
-.hamburger_menu_container {
-  display: none;
-}
-
-.header_container {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  top: 0rem;
-}
-
-.main_menu_container {
-  padding: .2rem;
-  display: flex;
-  /* Testing below */
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu_navigation {
-  position: relative;
-  left: 25%;
-  overflow: hidden;
-  border-radius: 5px;
-  background: var(--menu_background_color);
-  
-}
-
-
-
-
-
-
-
-/* Language Selector menu */
-#language_selector {
-  background-color: var(--language_menu_background_color);
-  color: var(--menu_text_color);
-  padding: .5rem;
-  font-size: var(--language_menu_font_size);
-  border: none;
-  margin-right: 1rem;
-  border-radius: 5px;
-}
-
-.language_dropdown_content {
-  display: block;
-  position: absolute;
-  font-size: var(--language_menu_font_size);
-  background-color: var(--language_menu_background_color);
-  min-width: 160px;
-  box-shadow: 0 10px 20px var(--dark_blue);
-  z-index: 1;
-}
-
-#language_selector:hover {
-  background-color: var(--language_hover_background_color);
-}
-
-.multilingual::after {
-  content: attr(data-en);
-}
-
-select option[value="gr"] {
-  background: rgba(100, 100, 100, 0.3);
-}
-
-
-/* Style the links inside the navigation bar */
-.menu_navigation a {
-  float: left;
-  color: var(--menu_text_color);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: var(--menu_font_size);
-}
-
-/* Change the color of links on hover */
-.menu_navigation a:hover {
-  background-color: var(--menu_text_color);
-  color: var(--menu_focus_text_color);
-}
-
-/* Add a color to the active/current link */
-.menu_navigation a.active {
-  background-color: var(--menu_active_background_color);;
-  color: white;
-}
 
 
 
@@ -324,24 +230,103 @@ select option[value="gr"] {
 
 
 
-/* Google Map */
-#map {
-  width: 20rem;
-  height: 10rem;
+
+
+
+
+/* Menu styling */
+/* **************************************************** */
+.header_container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 0rem;
+}
+
+.main_menu_container {
+  padding: .2rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu_navigation {
+  position: relative;
+  left: 25%;
+  overflow: hidden;
+  border-radius: 5px;
+  background: var(--menu_background_color);
+}
+
+
+/* Language Selector menu */
+#language_selector {
+  background-color: var(--language_menu_background_color);
+  color: var(--menu_text_color);
+  padding: .5rem;
+  font-size: var(--language_menu_font_size);
+  border: none;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.language_dropdown_content {
+  display: block;
+  position: absolute;
+  font-size: var(--language_menu_font_size);
+  background-color: var(--language_menu_background_color);
+  min-width: 160px;
+  box-shadow: 0 10px 20px var(--dark_blue);
+  z-index: 1;
+}
+
+#language_selector:hover {
+  background-color: var(--language_hover_background_color);
+}
+
+.multilingual::after {
+  content: attr(data-en);
+}
+
+select option[value="gr"] {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+
+/* Style the links inside the navigation bar */
+.menu_navigation a {
+  float: left;
+  color: var(--menu_text_color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: var(--menu_font_size);
+}
+
+/* Change the color of links on hover */
+.menu_navigation a:hover {
+  background-color: var(--menu_text_color);
+  color: var(--menu_focus_text_color);
+}
+
+/* Add a color to the active/current link */
+.menu_navigation a.current_menu_item {
+  background-color: var(--menu_current_item_background_color);;
+  color: white;
 }
 
 
 
 
-@media screen and (max-width: 750px) {
-  .main_menu_container {
-    display: none;
-  }
-  .hamburger_menu_container {
-    display: block;
-  }
 
-  #hamburger-menu {
-    display: inline;
+
+
+/* The below code handles the responsiveness of the top level menu */
+@media screen and (max-width: 800px) {
+  .menu_navigation a {
+    float: none;
+    display: block;
   }
 }
