@@ -24,9 +24,13 @@ body {
 /* This class is defined in style.css. Below are some additional properties */
 .introduction_container {
   margin-top: 4rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .introduction_container h1 {
+  width: auto;
 }
 
 .introduction_container h3 {

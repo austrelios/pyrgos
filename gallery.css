@@ -115,6 +115,7 @@ div.gallery_cell img.hover-shadow {
   position: relative;
   background-color: #fefefe;
   margin: auto;
+  margin-top: 2%;
   padding: 0;
   width: 90%;
   max-width: 90%;

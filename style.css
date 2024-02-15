@@ -26,21 +26,21 @@
   --dot_background_color: #bbb;
   --dot_hover_background_color: #717171;
 
-
-  --header_text_color: rgb(121, 80, 14);
+  /* --header_text_color: rgb(121, 80, 14); */
+  --header_text_color: #333333;
 
   --introduction_h1_text_size: xx-large;
   --introduction_h1_text_color: var(--header_text_color);
 
   --introduction_h3_text_size: medium;
-  --introduction_h3_text_color: hsl(240, 90%, 11%);
+  --introduction_h3_text_color: #555;
 
   --inner_title_text_color: var(--header_text_color);
   --inner_title_font_size: x-large;
-  --inner_text_color: hsl(240, 90%, 11%);
+  --inner_text_color: #555;
   --inner_text_size: small;
 
-  --footer_text_color: hsl(240, 90%, 11%);
+  --footer_text_color: #555;
   --footer_text_size: small;
 }
 
