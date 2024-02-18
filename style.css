@@ -33,8 +33,8 @@
   --introduction_h1_text_size: xx-large;
   --introduction_h1_text_color: var(--header_text_color);
 
-  --introduction_h3_text_size: medium;
-  --introduction_h3_text_color: #555;
+  --introduction_h2_text_size: medium;
+  --introduction_h2_text_color: #555;
 
   --inner_title_text_color: var(--header_text_color);
   --inner_title_font_size: x-large;
@@ -192,9 +192,9 @@ hr {
   color: var(--introduction_h1_text_color);
 }
 
-.introduction_container h3 {
-  font-size: var(--introduction_h3_text_size);
-  color: var(--introduction_h3_text_color);
+.introduction_container h2 {
+  font-size: var(--introduction_h2_text_size);
+  color: var(--introduction_h2_text_color);
   font-weight: normal;
 }
 
