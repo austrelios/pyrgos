@@ -21,40 +21,50 @@
 
     <div class="body_container">
 
+        <!-- Menu and Language Selector Container -->
         <header class="header_container">
+
             <nav class="main_menu_container">
 
-                <div class="menu_navigation">
-                    <a lang="en" href="./index.html">Home</a>
-                    <a lang="gr" href="./index.html">Αρχική</a>
+                <!-- Hamburger icon -->
+                <input class="side-menu" type="checkbox" id="side-menu" />
+                <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
 
-                    <a lang="en" href="./villas.html">Villas</a>
-                    <a lang="gr" href="./villas.html">Βίλες</a>
+                <ul class="menu_items_container">
+                    <li><a lang="en" class="current_menu_item" href="./index.html">Home</a>
+                    <li><a lang="gr" class="current_menu_item" href="./index.html">Αρχική</a></li>
 
-                    <a lang="en" href="./gallery.html">Gallery</a>
-                    <a lang="gr" href="./gallery.html">Φωτογραφίες</a>
+                    <li><a lang="en" href="./villas.html">Villas</a>
+                    <li><a lang="gr" href="./villas.html">Βίλες</a></li>
 
-                    <a lang="en" href="./location.html">Location</a>
-                    <a lang="gr" href="./location.html">Περιοχή</a>
+                    <li><a lang="en" href="./gallery.html">Gallery</a>
+                    <li><a lang="gr" href="./gallery.html">Φωτογραφίες</a></li>
 
-                    <a lang="en" class="active" href="./book.html">Book</a>
-                    <a lang="gr" class="active" href="./book.html">Κράτηση</a>
+                    <li><a lang="en" href="./location.html">Location</a>
+                    <li><a lang="gr" href="./location.html">Περιοχή</a></li>
 
-                    <a lang="en" href="./contact.html">Contact</a>
-                    <a lang="gr" href="./contact.html">Επικοινωνία</a>
+                    <li><a lang="en" href="./book.html">Book</a>
+                    <li><a lang="gr" href="./book.html">Κράτηση</a></li>
 
-                </div>
+                    <li><a lang="en" href="./contact.html">Contact</a>
+                    <li><a lang="gr" href="./contact.html">Επικοινωνία</a></li>
+
+
+                </ul>
+
 
                 <div class="language_dropdown">
                     <select id="language_selector" onchange='switch_Language()'>
-                        <option class="language_dropdown_content" value="en">EN</option>
-                        <option class="language_dropdown_content" value="gr">GR</option>
+                        <option class="language_dropdown_item" value="en">EN</option>
+                        <option class="language_dropdown_item" value="gr">GR</option>
                     </select>
 
                 </div>
 
             </nav>
+
         </header>
+
 
 
         <section class="introduction_container">

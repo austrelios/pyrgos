@@ -55,5 +55,3 @@ function switch_Language()  // IIFE
   language_selector.onchange = showLang;
 }
 
-
-

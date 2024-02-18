@@ -15,41 +15,49 @@
 <body>
 
 
-  <header class="header_container">
-    <nav class="main_menu_container">
+        <!-- Menu and Language Selector Container -->
+        <header class="header_container">
 
-      <div class="menu_navigation">
-        <a lang="en" href="./index.html">Home</a>
-        <a lang="gr" href="./index.html">Αρχική</a>
+          <nav class="main_menu_container">
 
-        <a lang="en" href="./villas.html">Villas</a>
-        <a lang="gr" href="./villas.html">Βίλες</a>
+              <!-- Hamburger icon -->
+              <input class="side-menu" type="checkbox" id="side-menu" />
+              <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
 
-        <a lang="en" class="active" href="./gallery.html">Gallery</a>
-        <a lang="gr" class="active" href="./gallery.html">Φωτογραφίες</a>
+              <ul class="menu_items_container">
+                  <li><a lang="en" class="current_menu_item" href="./index.html">Home</a>
+                  <li><a lang="gr" class="current_menu_item" href="./index.html">Αρχική</a></li>
 
-        <a lang="en" href="./location.html">Location</a>
-        <a lang="gr" href="./location.html">Περιοχή</a>
+                  <li><a lang="en" href="./villas.html">Villas</a>
+                  <li><a lang="gr" href="./villas.html">Βίλες</a></li>
 
-        <a lang="en" href="./book.html">Book</a>
-        <a lang="gr" href="./book.html">Κράτηση</a>
+                  <li><a lang="en" href="./gallery.html">Gallery</a>
+                  <li><a lang="gr" href="./gallery.html">Φωτογραφίες</a></li>
 
-        <a lang="en" href="./contact.html">Contact</a>
-        <a lang="gr" href="./contact.html">Επικοινωνία</a>
+                  <li><a lang="en" href="./location.html">Location</a>
+                  <li><a lang="gr" href="./location.html">Περιοχή</a></li>
 
-      </div>
+                  <li><a lang="en" href="./book.html">Book</a>
+                  <li><a lang="gr" href="./book.html">Κράτηση</a></li>
 
-      <div class="language_dropdown">
-        <select id="language_selector" onchange='switch_Language()'>
-          <option class="language_dropdown_content" value="en">EN</option>
-          <option class="language_dropdown_content" value="gr">GR</option>
-        </select>
+                  <li><a lang="en" href="./contact.html">Contact</a>
+                  <li><a lang="gr" href="./contact.html">Επικοινωνία</a></li>
 
-      </div>
 
-    </nav>
-  </header>
+              </ul>
 
+
+              <div class="language_dropdown">
+                  <select id="language_selector" onchange='switch_Language()'>
+                      <option class="language_dropdown_item" value="en">EN</option>
+                      <option class="language_dropdown_item" value="gr">GR</option>
+                  </select>
+
+              </div>
+
+          </nav>
+
+      </header>
 
 
   <div class="body_container">
@@ -57,7 +65,7 @@
     <section class="introduction_container">
 
       <h1 lang="en" class="inner_title">Discover the Sand and Sea Villas through our Gallery</h1>
-      <h1 lang="gr" class="inner_title">Φωτογραφίες από τις Βίλες Sand and Sea</h1>
+      <h1 lang="gr" class="inner_title">Ανακαλύψτε τις Βίλες Sand and Sea μέσα από την Γκαλερί</h1>
 
       <h3 lang="en">
         Step inside and explore the our holiday villas. The gallery showcases meticulously designed
@@ -65,10 +73,9 @@
         attention to detail that make our spaces a sanctuary of relaxation and rejuvenation.
       </h3>
       <h3 lang="gr">
-        Step inside and explore the our holiday villas. The Gallery showcases meticulously designed
-        interiors where modern elegance meets cozy comfort. Admire the tasteful furnishings, stylish decor, and
-        attention to detail that make our spaces a sanctuary of relaxation and rejuvenation.
-
+        Μπείτε μέσα και εξερευνήστε τις εξοχικές μας βίλες. Η γκαλερί αποκαλύπτει τους προσεκτικά σχεδιασμένους
+         εσωτερικούς χώρους όπου η σύγχρονη αισθητική συναντά την άνεση. Θαυμάστε την καλόγουστη επίπλωση, την κομψή διακόσμηση και
+         προσοχή στη λεπτομέρεια που κάνουν τους χώρους μας καταφύγιο χαλάρωσης και αναζωογόνησης.
       </h3>
 
     </section>

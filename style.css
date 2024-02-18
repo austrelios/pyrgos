@@ -11,11 +11,11 @@
   --dark_blue: hsl(240, 38%, 20%);
 
   --grayish_blue: hsl(240, 18%, 77%);
-  --menu_background_color: hsla(0, 100%, 50%, 0.1);
+  --menu_background_color: hsla(0, 100%, 50%, 0.3);
   --menu_current_item_background_color: #04AA6D;
   --menu_text_color: white;
   --menu_font_size: 1.5rem;
-  --menu_focus_text_color: hsl(25, 80%, 76%);
+  --menu_focus_text_color: hsl(240, 18%, 77%);
 
   --language_menu_font_size: .8rem;
   --language_menu_background_color: #04AA6D;
@@ -42,6 +42,17 @@
 
   --footer_text_color: #555;
   --footer_text_size: small;
+
+
+
+
+  --white: #f9f9f9;
+  --black: #36383F;
+  --gray: #85888C;
+
+
+
+
 }
 
 .noDisplay {
@@ -62,9 +73,7 @@ hr {
   border: none;
 }
 
-.body_container {
-
-}
+.body_container {}
 
 
 
@@ -101,11 +110,12 @@ hr {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: var(--dot_background_color);;
+  background-color: var(--dot_background_color);
+  ;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .current-item,
@@ -123,23 +133,44 @@ hr {
 }
 
 @keyframes fading-slideshow {
-    0%     {opacity: 0.3; transform: translateX(-15px);}
-    4%     {opacity: 1.0; transform: translateX(0px);}
-    33.33% {opacity: 1.0; transform: translateX(0px);}
-    37.33% {opacity: 0.3; transform: translateX(10px);}
-    100%   {opacity: 0.0; transform: translateX(15px);}
+  0% {
+    opacity: 0.3;
+    transform: translateX(-15px);
   }
+
+  4% {
+    opacity: 1.0;
+    transform: translateX(0px);
+  }
+
+  33.33% {
+    opacity: 1.0;
+    transform: translateX(0px);
+  }
+
+  37.33% {
+    opacity: 0.3;
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 0.0;
+    transform: translateX(15px);
+  }
+}
 
 
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
+
   .prev,
   .next,
   .text {
     font-size: 11px
   }
 }
+
 /* ********************** END Carousel Slide Show Code */
 
 
@@ -198,13 +229,14 @@ hr {
 }
 
 .animate_side_img {
- transform: translateY(-40px);
- opacity: 0.4;
- transition: 1.5s;
+  transform: translateY(-40px);
+  opacity: 0.4;
+  transition: 1.5s;
 }
+
 .animate_side_img--show {
- transform: translateY(0px);
- opacity: 1;
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 /* Introduction Container Styling - end
@@ -218,7 +250,7 @@ hr {
   text-align: center;
   margin: 1rem;
   display: block;
-  margin-top:3rem;
+  margin-top: 3rem;
 }
 
 .footer_text {
@@ -234,12 +266,25 @@ hr {
 
 
 
+
 /* Menu styling */
 /* **************************************************** */
 .header_container {
+  padding: 0;
   position: absolute;
+}
+
+.main_menu_container a {
+  text-decoration: none;
+}
+
+.main_menu_container ul {
+  list-style: none;
+}
+
+
+.header_container {
   width: 100%;
-  display: flex;
   justify-content: center;
   top: 0rem;
 }
@@ -247,21 +292,124 @@ hr {
 .main_menu_container {
   padding: .2rem;
   display: flex;
+  /* Testing below */
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: left;
 }
 
-.menu_navigation {
+.menu_items_container {
+  display: none;
+  padding-left: 0;
   position: relative;
-  left: 25%;
   overflow: hidden;
   border-radius: 5px;
   background: var(--menu_background_color);
+
+}
+
+/* Style the links inside the navigation bar */
+.menu_items_container a {
+  float: left;
+  color: var(--menu_text_color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: var(--menu_font_size);
+}
+
+/* Change the color of links on hover */
+.menu_items_container a:hover {
+  background-color: var(--menu_text_color);
+  color: var(--menu_focus_text_color);
+}
+
+/* Add a color to the active/current link */
+.menu_items_container a.active {
+  background-color: var(--menu_active_background_color);
+  color: white;
+}
+
+/* END OF MAIN MENU STYLING */
+
+
+
+
+
+
+/* Menu Icon */
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}
+
+/* Style label tag */
+
+.hamb-line {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+}
+
+/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--white);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.hamb-line::before {
+  top: 5px;
+}
+
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+}
+
+/* Hide checkbox */
+
+
+/* Toggle menu icon */
+.side-menu:checked~.menu_items_container {
+  max-height: 50%;
+  display: block;
+
+}
+
+.side-menu:checked~.hamb .hamb-line {
+  background: transparent;
+}
+
+.side-menu:checked~.hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.side-menu:checked~.hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
 }
 
 
-/* Language Selector menu */
+/* START OF LANGUAGE SELECTOR MENU STYLING */
+.language_dropdown {
+  position: absolute;
+  right: 0;
+}
+
 #language_selector {
   background-color: var(--language_menu_background_color);
   color: var(--menu_text_color);
@@ -272,9 +420,10 @@ hr {
   border-radius: 5px;
 }
 
-.language_dropdown_content {
+.language_dropdown_item {
   display: block;
   position: absolute;
+  right: 0;
   font-size: var(--language_menu_font_size);
   background-color: var(--language_menu_background_color);
   min-width: 160px;
@@ -294,39 +443,35 @@ select option[value="gr"] {
   background: rgba(100, 100, 100, 0.3);
 }
 
-
-/* Style the links inside the navigation bar */
-.menu_navigation a {
-  float: left;
-  color: var(--menu_text_color);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: var(--menu_font_size);
-}
-
-/* Change the color of links on hover */
-.menu_navigation a:hover {
-  background-color: var(--menu_text_color);
-  color: var(--menu_focus_text_color);
-}
-
-/* Add a color to the active/current link */
-.menu_navigation a.current_menu_item {
-  background-color: var(--menu_current_item_background_color);;
-  color: white;
-}
+/* END OF LANGUAGE SELECTOR MENU STYLING */
 
 
+/* Below responsiveness code is activated  when the screen is larger than a mobile device*/
+@media (min-width: 768px) {
+
+  .main_menu_container {
+    display: flex;
+    max-height: none;
+    top: 0;
+    position: relative;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu_items_container {
+    display: flex;
+    left: 25%;
+  }
+
+  .menu_items_container li {
+    float: left;
+  }
 
 
-
-
-
-/* The below code handles the responsiveness of the top level menu */
-@media screen and (max-width: 800px) {
-  .menu_navigation a {
-    float: none;
-    display: block;
+  .hamb {
+    display: none;
   }
 }
+
+
