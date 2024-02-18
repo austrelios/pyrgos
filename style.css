@@ -11,7 +11,8 @@
   --dark_blue: hsl(240, 38%, 20%);
 
   --grayish_blue: hsl(240, 18%, 77%);
-  --menu_background_color: hsla(0, 100%, 50%, 0.3);
+  --menu_background_color: hsla(242, 100%, 18%, 0.9);
+  /* hsla(0, 100%, 50%, 0.7); */
   --menu_current_item_background_color: #04AA6D;
   --menu_text_color: white;
   --menu_font_size: 1.5rem;
