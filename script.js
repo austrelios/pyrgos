@@ -8,8 +8,8 @@ const default_language = 'en',
   language_elements = [...document.querySelectorAll('*[lang]')],
   docTitle =
   {
-    en: 'English document title',
-    gr: 'Ελληνικός Τίτλος '
+    en: 'Beach Sand Villas',
+    gr: 'Beach Sand Βίλες '
   }
 
  switch_Language();
